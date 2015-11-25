@@ -1,0 +1,16 @@
+" Remove scrollbars
+set guioptions-=R
+set guioptions-=r
+set guioptions-=L
+set guioptions-=l
+
+" Set GUI font according to OS
+if has("gui_macvim")
+  set guifont=Source\ Code\ Pro:h14
+elseif has("gui_gtk2")
+  set guifont=Source\ Code\ Pro\ 10
+endif
+
+" Color scheme
+set background=dark
+colorscheme Solarized

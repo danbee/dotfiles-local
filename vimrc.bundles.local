@@ -1,0 +1,31 @@
+" Interface
+Plug 'scrooloose/nerdtree'
+Plug 'bling/vim-airline'
+
+" Language additions
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-haml'
+Plug 'pangloss/vim-javascript'
+Plug 'itspriddle/vim-jquery'
+Plug 'leshill/vim-json'
+Plug 'scrooloose/nerdcommenter'
+Plug 'mattn/emmet-vim'
+Plug 'briancollins/vim-jst'
+Plug 'juvenn/mustache.vim'
+Plug 'othree/html5.vim'
+Plug 'tpope/vim-rbenv'
+
+Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-pencil'
+
+" Todo
+Plug 'davidoc/taskpaper.vim'
+
+" Colors
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-scripts/wombat256.vim'
+Plug 'mrtazz/molokai.vim'
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plug 'shelling/railscasts.vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'morhetz/gruvbox'

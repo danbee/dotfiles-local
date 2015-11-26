@@ -1,4 +1,4 @@
-# dotfiles-local
+# Dotfiles
 
 My dotfiles. Extends `thoughtbot/dotfiles`
 

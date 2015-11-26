@@ -1,6 +1,6 @@
-# Dotfiles
+# Local dotfiles
 
-My dotfiles. Extends `thoughtbot/dotfiles`
+My local dotfiles. Extends `thoughtbot/dotfiles`
 
 # Installation
 

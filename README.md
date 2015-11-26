@@ -4,6 +4,8 @@ My dotfiles. Extends `thoughtbot/dotfiles`
 
 # Installation
 
+From home directory:
+
 ```bash
 chsh -s $(which zsh)
 git clone git@github.com:thoughtbot/dotfiles.git

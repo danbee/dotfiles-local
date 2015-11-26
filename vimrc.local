@@ -18,12 +18,5 @@ endif
 " Tell NERDCommenter to put spaces in
 let NERDSpaceDelims=1
 
-" Setup vim-pencil
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text         call pencil#init()
-augroup END
-
 " Extend plugins
 source $HOME/.vim/vimrc.d.vim

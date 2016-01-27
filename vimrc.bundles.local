@@ -2,6 +2,8 @@
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 
+Plug 'mileszs/ack.vim'
+
 " Language additions
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-haml'

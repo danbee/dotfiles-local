@@ -1,6 +1,7 @@
 " Interface
 Plug 'scrooloose/nerdtree'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'mileszs/ack.vim'
 
@@ -13,10 +14,10 @@ Plug 'leshill/vim-json'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
 Plug 'briancollins/vim-jst'
-Plug 'juvenn/mustache.vim'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-rbenv'
 Plug 'rust-lang/rust.vim'
+Plug 'mustache/vim-mustache-handlebars'
 
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'

@@ -2,3 +2,7 @@
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
 [include]
   path = .gitconfig.author
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f

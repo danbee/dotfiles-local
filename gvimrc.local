@@ -13,4 +13,4 @@ endif
 
 " Color scheme
 set background=dark
-colorscheme Solarized
+colorscheme gruvbox

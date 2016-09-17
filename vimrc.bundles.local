@@ -5,6 +5,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'mileszs/ack.vim'
 
+Plug 'ConradIrwin/vim-bracketed-paste'
+
 " Language additions
 Plug 'briancollins/vim-jst'
 Plug 'elixir-lang/vim-elixir'

@@ -7,6 +7,8 @@ Plug 'mileszs/ack.vim'
 
 Plug 'ConradIrwin/vim-bracketed-paste'
 
+Plug 'rizzatti/dash.vim'
+
 " Language additions
 Plug 'briancollins/vim-jst'
 Plug 'elixir-lang/vim-elixir'

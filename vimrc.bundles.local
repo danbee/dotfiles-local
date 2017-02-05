@@ -23,6 +23,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-rbenv'
 Plug 'vim-ruby/vim-ruby'
+Plug 'posva/vim-vue'
+Plug 'mxw/vim-jsx'
 
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'

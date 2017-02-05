@@ -1,6 +1,25 @@
 " Color scheme
 colorscheme Tomorrow-Night
 
+if has("gui_running")
+  " Set GUI font according to OS
+  if has("gui_macvim") || has("gui_vimr")
+    set guifont=Source\ Code\ Pro:h14
+  elseif has("gui_gtk2")
+    set guifont=Source\ Code\ Pro\ 10
+  endif
+
+  " Color scheme
+  set background=dark
+  colorscheme gruvbox
+
+  " Remove scrollbars
+  set guioptions-=R
+  set guioptions-=r
+  set guioptions-=L
+  set guioptions-=l
+endif
+
 " Map ctrl-hjkl for easy window movement
 map <c-h> <c-w>h
 map <c-j> <c-w>j

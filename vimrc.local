@@ -6,7 +6,7 @@ if has("gui_running")
   if has("gui_macvim") || has("gui_vimr")
     set guifont=Source\ Code\ Pro:h14
   elseif has("gui_gtk2")
-    set guifont=Source\ Code\ Pro\ 10
+    set guifont=DejaVu\ Sans\ Mono\ 15
   endif
 
   " Color scheme

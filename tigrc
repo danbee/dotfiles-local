@@ -1,1 +1,1 @@
-set status-show-untracked-files = true
+set status-show-untracked-files = yes

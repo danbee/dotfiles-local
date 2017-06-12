@@ -1,6 +1,6 @@
 [commit]
   # gpgsign = true
-  # signingkey = A0B1C2D3
 [user]
   name = Dan Dare
   email = dan@example.com
+  # signingkey = A0B1C2D3

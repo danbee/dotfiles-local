@@ -1,3 +1,7 @@
+# Disable Safari new window animation
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
+
+# Install some extra stuff
 brew bundle --file=- <<EOF
 brew "tig"
 brew "rsync"
@@ -19,6 +23,7 @@ cask "ivolume"
 cask "kaleidoscope"
 cask "karabiner-elements"
 cask "macvim"
+cask "moom"
 cask "slack"
 cask "spotify"
 cask "superduper"

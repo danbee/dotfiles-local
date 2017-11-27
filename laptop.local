@@ -5,6 +5,7 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
 brew bundle --file=- <<EOF
 brew "tig"
 brew "rsync"
+brew "phantomjs"
 brew "pv"
 
 cask "1password"

@@ -49,3 +49,5 @@ fi
 [[ -f ~/.zshrc.env ]] && source ~/.zshrc.env
 
 eval "$(thefuck --alias)"
+
+export PATH="$HOME/.bin:$PATH"

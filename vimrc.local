@@ -11,7 +11,7 @@ if has("gui_running")
 
   " Color scheme
   set background=dark
-  colorscheme gruvbox
+  colorscheme solarized
 
   " Remove scrollbars
   set guioptions-=R

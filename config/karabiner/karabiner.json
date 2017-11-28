@@ -49,7 +49,11 @@
                                             "fn"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "caps_lock",
+                                            "shift",
+                                            "command",
+                                            "option",
+                                            "control"
                                         ]
                                     }
                                 },
@@ -68,7 +72,11 @@
                                             "fn"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "caps_lock",
+                                            "shift",
+                                            "command",
+                                            "option",
+                                            "control"
                                         ]
                                     }
                                 },
@@ -87,7 +95,11 @@
                                             "fn"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "caps_lock",
+                                            "shift",
+                                            "command",
+                                            "option",
+                                            "control"
                                         ]
                                     }
                                 },
@@ -106,7 +118,11 @@
                                             "fn"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "caps_lock",
+                                            "shift",
+                                            "command",
+                                            "option",
+                                            "control"
                                         ]
                                     }
                                 },

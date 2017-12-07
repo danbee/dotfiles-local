@@ -6,3 +6,9 @@
   required = true
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
+[diff]
+  tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[alias]
+  ksdiff = difftool -yt Kaleidoscope

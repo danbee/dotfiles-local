@@ -13,6 +13,71 @@
                 },
                 "rules": [
                     {
+                        "description": "Fn + numbers to media keys",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [
+                                    { "key_code": "rewind" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "8",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [
+                                    { "key_code": "play_or_pause" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [
+                                    { "key_code": "fastforward" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "0",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [
+                                    { "key_code": "mute" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "hyphen",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [
+                                    { "key_code": "volume_decrement" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "equal_sign",
+                                    "modifiers": { "mandatory": ["fn"] }
+                                },
+                                "to": [
+                                    { "key_code": "volume_increment" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change right option into hyper key",
                         "manipulators": [
                             {

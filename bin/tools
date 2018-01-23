@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative "tools_lib/tools"
+
+tools = Tools.new
+tools.list_tools

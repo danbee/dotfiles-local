@@ -17,16 +17,6 @@ git_prompt_info() {
   fi
 }
 
-# adds the current ruby version in yellow
-ruby_version() {
-  if (( $+commands[rbenv] )); then
-    ver=$(rbenv version |cut -d " " -f 1)
-    if [[ -n $ver ]]; then
-      echo "%{$fg[red]%}${ver}%{$reset_color%}"
-    fi
-  fi
-}
-
 # makes color constants available
 autoload -U colors
 colors
@@ -39,4 +29,3 @@ setopt promptsubst
 
 # prompt
 export PROMPT='$(git_prompt_info)${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_color%}:"}%{$fg_bold[blue]%}%2c%{$reset_color%} %{$fg_bold[cyan]%}❯%{$reset_color%} '
-export RPROMPT='$(ruby_version)'

@@ -11,7 +11,7 @@ class Tools
   end
 
   def list_tools
-    tools.each do |tool, version|
+    tools.sort.each do |tool, version|
       if available_tools.include? tool
         puts "#{tool_icon(tool)}#{tool.ljust(max_length)} #{version}"
       end

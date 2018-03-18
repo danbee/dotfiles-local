@@ -1,17 +1,19 @@
 " Color scheme
+set background=dark
 colorscheme Tomorrow-Night
 
-if has("gui_running")
+" Color scheme
+if has("gui_running") || has("gui_vimr")
   " Set GUI font according to OS
-  if has("gui_macvim") || has("gui_vimr")
-    set guifont=Source\ Code\ Pro:h14
+  if has("gui_macvim")
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h13
   elseif has("gui_gtk2")
     set guifont=DejaVu\ Sans\ Mono\ 15
   endif
 
   " Color scheme
   set background=dark
-  colorscheme solarized
+  colorscheme solarized8_high
 
   " Remove scrollbars
   set guioptions-=R
@@ -39,6 +41,7 @@ endif
 
 " Tell NERDCommenter to put spaces in
 let NERDSpaceDelims=1
+
 
 " Extend plugins
 source $HOME/.vim/vimrc.d.vim

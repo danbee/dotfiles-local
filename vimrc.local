@@ -6,7 +6,7 @@ colorscheme Tomorrow-Night
 if has("gui_running") || has("gui_vimr")
   " Set GUI font according to OS
   if has("gui_macvim")
-    set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+    set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono:h13
   elseif has("gui_gtk2")
     set guifont=DejaVu\ Sans\ Mono\ 15
   endif
@@ -22,11 +22,11 @@ if has("gui_running") || has("gui_vimr")
   set guioptions-=l
 endif
 
-" Map ctrl-hjkl for easy window movement
-map <c-h> <c-w>h
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
+
+" Map ctrl-a to redraw
+nnoremap <C-a> :redraw!<CR>
 
 " Set Scroll off
 set scrolloff=12

@@ -505,7 +505,7 @@
                         ]
                     },
                     {
-                        "description": "Change § key to escape with Fn-§ for original character and put backtick where it should be",
+                        "description": "Change § key to escape with Fn-§ for original character",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -535,7 +535,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "grave_accent_and_tilde"
+                                        "key_code": "non_us_backslash"
                                     }
                                 ],
                                 "type": "basic"
@@ -566,36 +566,6 @@
                                 "to": [
                                     {
                                         "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 1452
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "grave_accent_and_tilde",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock",
-                                            "shift",
-                                            "command",
-                                            "option",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "non_us_backslash"
                                     }
                                 ],
                                 "type": "basic"
@@ -666,24 +636,7 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
-                    "simple_modifications": [
-                        {
-                            "from": {
-                                "key_code": "non_us_backslash"
-                            },
-                            "to": {
-                                "key_code": "grave_accent_and_tilde"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "grave_accent_and_tilde"
-                            },
-                            "to": {
-                                "key_code": "non_us_backslash"
-                            }
-                        }
-                    ]
+                    "simple_modifications": []
                 },
                 {
                     "disable_built_in_keyboard_if_exists": false,
@@ -828,6 +781,7 @@
             "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
+                "country_code": 0,
                 "keyboard_type": "iso"
             }
         }

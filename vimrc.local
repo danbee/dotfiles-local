@@ -13,7 +13,7 @@ if has("gui_running") || has("gui_vimr")
 
   " Color scheme
   set background=dark
-  colorscheme solarized8_high
+  colorscheme solarized8_dark_high
 
   " Remove scrollbars
   set guioptions-=R

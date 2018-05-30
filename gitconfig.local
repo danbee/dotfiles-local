@@ -1,5 +1,8 @@
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[color "diff"]
+  oldMoved = 141
+  newMoved = 39
 [include]
   path = .gitconfig.author
 [filter "lfs"]
@@ -12,3 +15,5 @@
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [alias]
   ksdiff = difftool -yt Kaleidoscope
+[tig]
+  status-show-untracked-files = yes

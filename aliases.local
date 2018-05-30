@@ -7,3 +7,5 @@ alias rebasate="git rebase"
 
 # Bundler
 alias be="bundle exec"
+
+alias fuckit="git reset HEAD --hard"

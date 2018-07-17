@@ -28,12 +28,13 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-haml'
 Plug 'vim-ruby/vim-ruby'
 Plug 'keith/swift.vim'
+Plug 'tpope/vim-markdown'
 
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
 
 " Todo
-Plug 'davidoc/taskpaper.vim'
+Plug 'tbabej/taskwiki'
 
 " Colors
 Plug 'altercation/vim-colors-solarized'

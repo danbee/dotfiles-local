@@ -29,6 +29,7 @@ Plug 'tpope/vim-haml'
 Plug 'vim-ruby/vim-ruby'
 Plug 'keith/swift.vim'
 Plug 'tpope/vim-markdown'
+Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'

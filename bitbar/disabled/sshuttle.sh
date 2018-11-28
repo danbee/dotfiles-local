@@ -5,9 +5,9 @@ SSHUTTLE_DISCONNECTED="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IAr
 
 VPN_EXECUTABLE=/usr/local/bin/sshuttle
 
-VPN_HOST="vps2.danbee.co.uk"
+VPN_HOST="streisand.cowjuice.net"
 
-VPN_USERNAME="danbarber"
+VPN_USERNAME="forward"
 
 VPN_PIDFILE="/tmp/sshuttle.pid"
 

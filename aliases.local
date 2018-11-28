@@ -5,6 +5,11 @@ alias pushate="git push"
 alias fetchate="git fetch"
 alias rebasate="git rebase"
 
+alias ts="tig status"
+
+# vim
+alias v="mvim"
+
 # Bundler
 alias be="bundle exec"
 

@@ -3,7 +3,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 
 Plug 'ConradIrwin/vim-bracketed-paste'
 
@@ -12,27 +12,29 @@ Plug 'rizzatti/dash.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " Language additions
-Plug 'briancollins/vim-jst'
-Plug 'elixir-lang/vim-elixir'
-Plug 'itspriddle/vim-jquery'
-Plug 'leshill/vim-json'
+Plug 'briancollins/vim-jst', { 'for': ['jst', 'ejs'] }
+Plug 'elixir-editors/vim-elixir'
+Plug 'itspriddle/vim-jquery', { 'for': 'javascript' }
+Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'mattn/emmet-vim'
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'mxw/vim-jsx'
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
-Plug 'rhysd/vim-crystal'
-Plug 'rust-lang/rust.vim'
+Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'posva/vim-vue', { 'for': ['javascript', 'vue'] }
+Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-haml'
-Plug 'vim-ruby/vim-ruby'
-Plug 'keith/swift.vim'
-Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-haml', { 'for': ['haml', 'sass', 'scss'] }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
+
+Plug 'joker1007/vim-ruby-heredoc-syntax', { 'for': 'ruby' }
 
 " Todo
 Plug 'tbabej/taskwiki'

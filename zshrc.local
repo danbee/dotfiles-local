@@ -48,6 +48,8 @@ fi
 # Environment config
 [[ -f ~/.zshrc.env ]] && source ~/.zshrc.env
 
-eval "$(thefuck --alias)"
+if (( $+commands[thefuck] )); then
+  eval "$(thefuck --alias)"
+fi
 
 export PATH="$HOME/.bin:$PATH"

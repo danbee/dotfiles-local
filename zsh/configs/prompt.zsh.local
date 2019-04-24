@@ -1,3 +1,25 @@
+source "$HOME/.zsh/lib/async.zsh"
+
+async_init
+
+async_register_callback git_prompt_worker git_prompt_callback
+
+export PROMPT_GIT_BRANCH=""
+export PROMPT_GIT_DIRTY=""
+
+git_prompt_callback() {
+  case $1 in
+    git_branch)
+      PROMPT_GIT_BRANCH=$3
+      ;;
+    git_dirty)
+      PROMPT_GIT_DIRTY=$3
+      ;;
+  esac
+
+  zle reset-prompt
+}
+
 # gets whether git is currently dirty
 git_dirty() {
   git diff --ignore-submodules --quiet
@@ -9,13 +31,39 @@ git_dirty() {
   fi
 }
 
+# gets the current git branch
+git_branch() {
+  git rev-parse --abbrev-ref HEAD 2>/dev/null
+}
+
 # adds the current branch name in green
 git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null)
-  if [[ -n $ref ]]; then
-    echo "%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}%{$fg_bold[red]%}$(git_dirty)%{$reset_color%} "
+  if [[ -n $PROMPT_GIT_BRANCH ]]; then
+    echo "%{$fg_bold[green]%}${PROMPT_GIT_BRANCH}%{$reset_color%}%{$fg_bold[red]%}${PROMPT_GIT_DIRTY}%{$reset_color%} "
   fi
 }
+
+git_branch_async() {
+  async_job git_prompt_worker git_branch
+}
+
+git_status_async() {
+  async_job git_prompt_worker git_dirty
+}
+
+worker_change_directory() {
+  PROMPT_GIT_BRANCH=""
+  PROMPT_GIT_DIRTY=""
+  async_worker_eval git_prompt_worker builtin cd -q "$PWD"
+}
+
+async_start_worker git_prompt_worker
+
+autoload -Uz add-zsh-hook
+
+add-zsh-hook chpwd worker_change_directory
+add-zsh-hook precmd git_branch_async
+add-zsh-hook precmd git_status_async
 
 # makes color constants available
 autoload -U colors
@@ -32,7 +80,7 @@ export PROMPT='$(git_prompt_info)${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_
 export RPROMPT='%D{%K:%M:%S}'
 
 # update the prompt on carriage return
-function _reset-prompt-and-accept-line {
+function _reset-prompt-and-accept-line() {
   zle reset-prompt
   zle .accept-line
 }

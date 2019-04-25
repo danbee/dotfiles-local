@@ -1,69 +1,30 @@
-source "$HOME/.zsh/lib/async.zsh"
+source "$HOME/.zsh/lib/gitstatus/gitstatus.plugin.zsh"
 
-async_init
+gitstatus_start MY
 
-async_register_callback git_prompt_worker git_prompt_callback
+export GIT_PROMPT=""
 
-export PROMPT_GIT_BRANCH=""
-export PROMPT_GIT_DIRTY=""
+update_git_prompt() {
+  typeset -g GIT_PROMPT=""
 
-git_prompt_callback() {
-  case $1 in
-    git_branch)
-      PROMPT_GIT_BRANCH=$3
-      ;;
-    git_dirty)
-      PROMPT_GIT_DIRTY=$3
-      ;;
-  esac
+  gitstatus_query -t 5 MY || return
+  [[ $VCS_STATUS_RESULT == ok-sync ]] || return
 
-  zle reset-prompt
-}
+  GIT_PROMPT+="%{$fg_bold[green]%}${VCS_STATUS_LOCAL_BRANCH}%{$reset_color%}"
 
-# gets whether git is currently dirty
-git_dirty() {
-  git diff --ignore-submodules --quiet
-  if [[ $? == 1 ]]; then
-    echo "✱"
-  else
-    git diff --staged --ignore-submodules --quiet
-    [[ $? == 1 ]] && echo "✱"
+  if [[ $VCS_STATUS_HAS_STAGED == 1 ]] || [[ $VCS_STATUS_HAS_UNSTAGED ]]; then
+    GIT_PROMPT+="%{$fg_bold[red]%}✱%{$reset_color%}"
   fi
-}
 
-# gets the current git branch
-git_branch() {
-  git rev-parse --abbrev-ref HEAD 2>/dev/null
-}
+  [[ $VCS_STATUS_COMMITS_AHEAD -gt 0 ]] && GIT_PROMPT+=" ⇡${VCS_STATUS_COMMITS_AHEAD}"
+  [[ $VCS_STATUS_COMMITS_BEHIND -gt 0 ]] && GIT_PROMPT+=" ⇣${VCS_STATUS_COMMITS_BEHIND}"
 
-# adds the current branch name in green
-git_prompt_info() {
-  if [[ -n $PROMPT_GIT_BRANCH ]]; then
-    echo "%{$fg_bold[green]%}${PROMPT_GIT_BRANCH}%{$reset_color%}%{$fg_bold[red]%}${PROMPT_GIT_DIRTY}%{$reset_color%} "
-  fi
+  GIT_PROMPT+=" "
 }
-
-git_branch_async() {
-  async_job git_prompt_worker git_branch
-}
-
-git_status_async() {
-  async_job git_prompt_worker git_dirty
-}
-
-worker_change_directory() {
-  PROMPT_GIT_BRANCH=""
-  PROMPT_GIT_DIRTY=""
-  async_worker_eval git_prompt_worker builtin cd -q "$PWD"
-}
-
-async_start_worker git_prompt_worker
 
 autoload -Uz add-zsh-hook
 
-add-zsh-hook chpwd worker_change_directory
-add-zsh-hook precmd git_branch_async
-add-zsh-hook precmd git_status_async
+add-zsh-hook precmd update_git_prompt
 
 # makes color constants available
 autoload -U colors
@@ -76,12 +37,12 @@ export CLICOLOR=1
 setopt promptsubst
 
 # prompt
-export PROMPT='$(git_prompt_info)${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_color%}:"}%{$fg_bold[blue]%}%2c%{$reset_color%} %{$fg_bold[cyan]%}❯%{$reset_color%} '
+export PROMPT='${GIT_PROMPT}${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_color%}:"}%{$fg_bold[blue]%}%2c%{$reset_color%} %{$fg_bold[cyan]%}❯%{$reset_color%} '
 export RPROMPT='%D{%K:%M:%S}'
 
 # update the prompt on carriage return
-function _reset-prompt-and-accept-line() {
-  zle reset-prompt
-  zle .accept-line
-}
-zle -N accept-line _reset-prompt-and-accept-line
+# function _reset-prompt-and-accept-line() {
+  # zle reset-prompt
+  # zle .accept-line
+# }
+# zle -N accept-line _reset-prompt-and-accept-line

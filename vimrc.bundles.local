@@ -30,6 +30,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'dearrrfish/vim-applescript'
 
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'

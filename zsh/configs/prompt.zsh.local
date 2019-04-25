@@ -10,16 +10,17 @@ update_git_prompt() {
   gitstatus_query -t 5 MY || return
   [[ $VCS_STATUS_RESULT == ok-sync ]] || return
 
-  GIT_PROMPT+="%{$fg_bold[green]%}${VCS_STATUS_LOCAL_BRANCH}%{$reset_color%}"
+  GIT_PROMPT+="%{$fg[blue]%}[%{$fg_bold[blue]%}${VCS_STATUS_LOCAL_BRANCH}%{$reset_color%}"
 
-  if [[ $VCS_STATUS_HAS_STAGED == 1 ]] || [[ $VCS_STATUS_HAS_UNSTAGED ]]; then
-    GIT_PROMPT+="%{$fg_bold[red]%}✱%{$reset_color%}"
+  if [[ $VCS_STATUS_HAS_STAGED == 1 ]]; then
+    GIT_PROMPT+="%{$fg_bold[yellow]%}+%{$reset_color%}"
   fi
 
-  [[ $VCS_STATUS_COMMITS_AHEAD -gt 0 ]] && GIT_PROMPT+=" ⇡${VCS_STATUS_COMMITS_AHEAD}"
-  [[ $VCS_STATUS_COMMITS_BEHIND -gt 0 ]] && GIT_PROMPT+=" ⇣${VCS_STATUS_COMMITS_BEHIND}"
+  if [[ $VCS_STATUS_HAS_UNSTAGED ]]; then
+    GIT_PROMPT+="%{$fg_bold[red]%}∗%{$reset_color%}"
+  fi
 
-  GIT_PROMPT+=" "
+  GIT_PROMPT+="%{$fg[blue]%}]%{$reset_color%} "
 }
 
 autoload -Uz add-zsh-hook
@@ -37,12 +38,12 @@ export CLICOLOR=1
 setopt promptsubst
 
 # prompt
-export PROMPT='${GIT_PROMPT}${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_color%}:"}%{$fg_bold[blue]%}%2c%{$reset_color%} %{$fg_bold[cyan]%}❯%{$reset_color%} '
+export PROMPT='${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_color%}:"}%{$fg_bold[green]%}%2c%{$reset_color%} ${GIT_PROMPT}%{$fg_bold[cyan]%}❯%{$reset_color%} '
 export RPROMPT='%D{%K:%M:%S}'
 
 # update the prompt on carriage return
-# function _reset-prompt-and-accept-line() {
-  # zle reset-prompt
-  # zle .accept-line
-# }
-# zle -N accept-line _reset-prompt-and-accept-line
+function _reset-prompt-and-accept-line() {
+  zle reset-prompt
+  zle .accept-line
+}
+zle -N accept-line _reset-prompt-and-accept-line

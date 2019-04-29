@@ -11,6 +11,11 @@ Plug 'rizzatti/dash.vim'
 
 Plug 'ryanoasis/vim-devicons'
 
+" Search
+UnPlug 'ctrlp.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 " Language additions
 Plug 'briancollins/vim-jst', { 'for': ['jst', 'ejs'] }
 Plug 'elixir-editors/vim-elixir'

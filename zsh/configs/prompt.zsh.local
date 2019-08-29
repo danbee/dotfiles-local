@@ -23,6 +23,23 @@ update_git_prompt() {
   GIT_PROMPT+="%{$fg[blue]%}]%{$reset_color%} "
 }
 
+os_icon() {
+  case `uname` in
+    Darwin)
+      echo "%{$fg[white]%} macOS%{$reset_color%}"
+      ;;
+    Linux)
+      echo "%{$fg[yellow]%} Linux%{$reset_color%}"
+      ;;
+    FreeBSD)
+      echo "%{$fg[red]%} FreeBSD%{$reset_color%}"
+      ;;
+    OpenBSD)
+      echo "%{$fg[yellow]%}OpenBSD%{$reset_color%}"
+      ;;
+  esac
+}
+
 autoload -Uz add-zsh-hook
 
 add-zsh-hook precmd update_git_prompt
@@ -38,7 +55,7 @@ export CLICOLOR=1
 setopt promptsubst
 
 # prompt
-export PROMPT='${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_color%}:"}%{$fg_bold[green]%}%2c%{$reset_color%} ${GIT_PROMPT}%{$fg_bold[cyan]%}❯%{$reset_color%} '
+export PROMPT='$(os_icon) ${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_color%}:"}%{$fg_bold[green]%}%2c%{$reset_color%} ${GIT_PROMPT}%{$fg_bold[cyan]%}❯%{$reset_color%} '
 export RPROMPT='%D{%K:%M:%S}'
 
 # update the prompt on carriage return

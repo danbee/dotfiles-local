@@ -1,5 +1,6 @@
-ruby 2.6.2
-nodejs 11.14.0
-python 3.7.3
-erlang 21.3.6
-elixir 1.8.1
+ruby 2.6.5
+nodejs 12.3.1
+python 3.8.0
+erlang 22.0.1
+elixir 1.8.2
+rust 1.35.0

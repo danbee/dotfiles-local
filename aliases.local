@@ -8,7 +8,7 @@ alias rebasate="git rebase"
 alias ts="tig status"
 
 # vim
-alias v="vimr -s"
+alias v="gvim"
 
 # Bundler
 alias be="bundle exec"

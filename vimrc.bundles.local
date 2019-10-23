@@ -36,6 +36,7 @@ Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dearrrfish/vim-applescript'
+Plug 'cespare/vim-toml'
 
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'

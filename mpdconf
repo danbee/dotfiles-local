@@ -1,0 +1,31 @@
+bind_to_address "any"
+
+db_file "~/.mpd/database"
+music_directory "~/Music/Library"
+playlist_directory "~/.mpd/playlists"
+log_file "~/.mpd/log"
+pid_file "~/.mpd/pid"
+state_file "~/.mpd/state"
+sticker_file "~/.mpd/sticker.sql"
+
+decoder {
+  plugin "mp4ff"
+  enabled "no"
+}
+
+auto_update "yes"
+auto_update_depth "2"
+
+follow_outside_symlinks "yes"
+follow_inside_symlinks "yes"
+
+replaygain "auto"
+
+log_level "default"
+
+audio_output {
+  type "osx"
+  name "macOS Audio Output"
+  mixer_type "software"
+  options "buffer_time=500"
+}

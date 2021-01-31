@@ -1,4 +1,4 @@
-source "$HOME/.zsh/lib/gitstatus/gitstatus.plugin.zsh"
+source "$(brew --prefix)/opt/gitstatus/gitstatus.plugin.zsh"
 
 gitstatus_start MY
 

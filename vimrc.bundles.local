@@ -13,7 +13,6 @@ Plug 'ryanoasis/vim-devicons'
 
 " Search
 UnPlug 'ctrlp.vim'
-Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Language additions

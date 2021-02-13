@@ -44,4 +44,7 @@ yabai -m config left_padding                 8
 yabai -m config right_padding                8
 yabai -m config window_gap                   8
 
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+
 echo "yabai configuration loaded.."

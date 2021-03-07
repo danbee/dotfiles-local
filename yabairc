@@ -47,5 +47,9 @@ yabai -m config window_gap                   8
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^PCalc$" manage=off
+yabai -m rule --add app="^Airfoil$" manage=off
+yabai -m rule --add app="^Finder$" title="Copy" manage=off
+yabai -m rule --add title="Preferences" manage=off
+yabai -m rule --add title='Preferences$' manage=off
 
 echo "yabai configuration loaded.."

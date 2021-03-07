@@ -19,3 +19,5 @@
   ksdiff = difftool -yt Kaleidoscope
 [tig]
   status-show-untracked-files = yes
+[pull]
+  rebase = false

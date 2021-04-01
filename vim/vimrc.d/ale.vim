@@ -1,5 +1,7 @@
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
+let g:ale_fix_on_save = 1
+
 let g:ale_fixers = {
 \  'elixir': [
 \    'mix_format'
@@ -17,5 +19,15 @@ let g:ale_fixers = {
 \    'remove_trailing_lines',
 \    'trim_whitespace',
 \    'rubocop'
+\  ],
+\  'typescript': [
+\    'remove_trailing_lines',
+\    'trim_whitespace',
+\    'prettier'
+\  ],
+\  'typescriptreact': [
+\    'remove_trailing_lines',
+\    'trim_whitespace',
+\    'prettier'
 \  ]
 \}

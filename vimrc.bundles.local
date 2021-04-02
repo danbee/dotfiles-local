@@ -44,6 +44,8 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
 
+Plug 'freitass/todo.txt-vim'
+
 Plug 'joker1007/vim-ruby-heredoc-syntax', { 'for': 'ruby' }
 
 " Todo

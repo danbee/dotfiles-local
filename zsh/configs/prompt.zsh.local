@@ -1,13 +1,13 @@
-source "$(brew --prefix)/opt/gitstatus/gitstatus.plugin.zsh"
+source $(brew --prefix)/opt/gitstatus/gitstatus.plugin.zsh MY
 
-gitstatus_start MY
+gitstatus_startMY MY
 
 export GIT_PROMPT=""
 
 update_git_prompt() {
   typeset -g GIT_PROMPT=""
 
-  gitstatus_query -t 5 MY || return
+  gitstatus_queryMY MY || return
   [[ $VCS_STATUS_RESULT == ok-sync ]] || return
 
   GIT_PROMPT+="%{$fg[blue]%}[%{$fg_bold[blue]%}${VCS_STATUS_LOCAL_BRANCH}%{$reset_color%}"
@@ -24,7 +24,7 @@ update_git_prompt() {
 }
 
 os_icon() {
-  case `uname` in
+  case $(uname) in
     Darwin)
       echo "%{$fg[white]%} macOS%{$reset_color%}"
       ;;
@@ -59,7 +59,7 @@ export PROMPT='$(os_icon) ${SSH_CONNECTION+"%{$fg[yellow]%}%n@%m%{$reset_color%}
 export RPROMPT='%D{%K:%M:%S}'
 
 # update the prompt on carriage return
-function _reset-prompt-and-accept-line() {
+function _reset-prompt-and-accept-line {
   zle reset-prompt
   zle .accept-line
 }

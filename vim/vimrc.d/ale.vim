@@ -18,7 +18,8 @@ let g:ale_fixers = {
 \  'ruby': [
 \    'remove_trailing_lines',
 \    'trim_whitespace',
-\    'rubocop'
+\    'rubocop',
+\    'standardrb'
 \  ],
 \  'typescript': [
 \    'remove_trailing_lines',

@@ -17,7 +17,7 @@ update_git_prompt() {
   fi
 
   if [[ $VCS_STATUS_HAS_UNSTAGED == 1 ]]; then
-    GIT_PROMPT+="%{$fg_bold[red]%}∗%{$reset_color%}"
+    GIT_PROMPT+="%{$fg_bold[red]%}*%{$reset_color%}"
   fi
 
   GIT_PROMPT+="%{$fg[blue]%}]%{$reset_color%} "

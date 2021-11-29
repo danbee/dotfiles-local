@@ -21,3 +21,5 @@
   status-show-untracked-files = yes
 [pull]
   rebase = false
+[rerere]
+  enabled = true

@@ -13,15 +13,13 @@ class Tools
   def list_tools
     tools.sort.each do |tool, version|
       if available_tools.include? tool
-        puts "#{tool_icon(tool)}#{tool.ljust(max_length)} #{version}"
+        puts "#{tool_icon(tool)}#{tool.ljust(max_length)}  #{version}"
       end
     end
   end
 
   def max_length
-    @max_length ||= installed_tools.max do |a, b|
-      a.length <=> b.length
-    end.length
+    @max_length ||= installed_tools.max_by(&:length).length
   end
 
   def installed_tools

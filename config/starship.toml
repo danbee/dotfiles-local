@@ -1,0 +1,20 @@
+format="$all$directory$character"
+
+[character]
+success_symbol = "[](bold cyan)"
+error_symbol = "[](bold red)"
+
+[package]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[aws]
+symbol = " "
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+
+[directory]
+style = "bold green"

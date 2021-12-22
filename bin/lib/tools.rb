@@ -1,5 +1,5 @@
-require_relative "tools_file"
-require_relative "tool_icons"
+require_relative "tools/file"
+require_relative "tools/icons"
 
 class Tools
   include ToolIcons

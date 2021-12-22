@@ -1,4 +1,4 @@
-format="$all$directory$character"
+format="$all$custom$jobs$directory$character"
 
 [character]
 success_symbol = "[](bold cyan)"
@@ -12,6 +12,21 @@ symbol = " "
 
 [aws]
 symbol = " "
+
+[python]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[custom.os]
+disabled = false
+command = "os"
+style = "bold white"
+format = "[$symbol($output )]($style)"
+symbol = ""
+when = "true"
+shell = ["bash", "--noprofile", "--norc"]
 
 [git_branch]
 format = "[$symbol$branch]($style) "

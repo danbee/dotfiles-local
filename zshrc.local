@@ -56,3 +56,5 @@ if (( $+commands[thefuck] )); then
 fi
 
 export PATH="$HOME/.bin:$PATH"
+
+eval "$(starship init zsh)"

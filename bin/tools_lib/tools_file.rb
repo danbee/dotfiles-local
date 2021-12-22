@@ -1,5 +1,3 @@
-require_relative "empty_file"
-
 class ToolsFile
   def initialize
   end
@@ -12,13 +10,12 @@ class ToolsFile
 
   def format_tools
     Hash[tools_file.lines.map do |tool|
-      tool.split
+      name, version, source = tool.split
+      [name, { version: version, source: source }]
     end]
   end
 
   def tools_file
-    File.read(".tool-versions")
-  rescue
-    EmptyFile.new
+    `asdf current 2>&1`
   end
 end

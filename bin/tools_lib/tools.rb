@@ -11,10 +11,22 @@ class Tools
   end
 
   def list_tools
-    tools.sort.each do |tool, version|
-      if available_tools.include? tool
-        puts "#{tool_icon(tool)}#{tool.ljust(max_length)}  #{version}"
+    tools.sort.each do |tool, meta|
+      if available_tools.include?(tool)
+        puts "#{tool_icon(tool)}" \
+             "#{tool.ljust(max_length)}  " \
+             "#{version(meta)}"
       end
+    end
+  end
+
+  private
+
+  def version(meta)
+    if installed?(meta)
+      "\e[37m#{meta[:version]}"
+    else
+      "\e[31m#{meta[:version]}* (not installed)"
     end
   end
 
@@ -28,5 +40,9 @@ class Tools
 
   def available_tools
     TOOL_ICONS.keys
+  end
+
+  def installed?(meta)
+    meta[:source].start_with?("/")
   end
 end

@@ -21,5 +21,7 @@
   status-show-untracked-files = yes
 [pull]
   rebase = false
+[rebase]
+  instructionFormat = (%al) %s
 [rerere]
   enabled = true

@@ -16,3 +16,6 @@ alias be="bundle exec"
 alias fuckit="git reset HEAD --hard"
 
 alias httpserver="ruby -run -e httpd"
+
+# Shell
+alias sanify="stty sane"

@@ -1,5 +1,17 @@
-#!/usr/bin/env ruby
+#!/bin/sh
 
-require_relative "lib/os"
+OS=`uname -s`
 
-puts OS.new.os
+case $OS in
+  Darwin)
+    printf ""
+    ;;
+  Linux)
+    printf ""
+    ;;
+  FreeBSD)
+    printf ""
+    ;;
+esac
+
+printf " $OS\n"

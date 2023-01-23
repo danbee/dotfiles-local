@@ -34,20 +34,6 @@ fi
 export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
 
-# Enable direnv
-if (( $+commands[direnv] )); then
-  #eval `direnv hook $0`
-  _direnv_hook() {
-    eval "$(direnv export $0)";
-  }
-  typeset -a precmd_functions
-  if [[ -z $precmd_functions[(r)_direnv_hook] ]]; then
-    precmd_functions+=_direnv_hook;
-  fi
-  # Make direnv use the system ruby. https://github.com/zimbatm/direnv/issues/42
-  export DIRENV_RUBY=/usr/bin/ruby
-fi
-
 # Environment config
 [[ -f ~/.zshrc.env ]] && source ~/.zshrc.env
 

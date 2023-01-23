@@ -19,6 +19,9 @@ symbol = " "
 [elixir]
 symbol = " "
 
+[rust]
+symbol = " "
+
 [custom.os]
 disabled = false
 command = "os"

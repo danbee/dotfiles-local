@@ -9,6 +9,10 @@ export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=4096
 export SAVEHIST=4096
 
+# use NeoVim as EDITOR
+export VISUAL=nvim
+export EDITOR=$VISUAL
+
 # shared history
 setopt append_history
 setopt inc_append_history

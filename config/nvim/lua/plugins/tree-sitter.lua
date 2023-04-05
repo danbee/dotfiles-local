@@ -1,8 +1,11 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+
     build = ":TSUpdate",
+
     event = { "BufReadPost", "BufNewFile" },
+
     dependencies = {
       {
         "nvim-treesitter/nvim-treesitter-textobjects",
@@ -27,41 +30,6 @@ return {
     },
 
     ---@type TSConfig
-    opts = {
-      highlight = { enable = true },
-      indent = { enable = true },
-      context_commentstring = { enable = true, enable_autocmd = false },
-      ensure_installed = {
-        "bash",
-        "c",
-        "css",
-        "dockerfile",
-        "eex",
-        "elixir",
-        "help",
-        "html",
-        "javascript",
-        "json",
-        "lua",
-        "luadoc",
-        "luap",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
-        "ruby",
-        "rust",
-        "scss",
-        "sql",
-        "swift",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
-        "vue",
-        "yaml",
-      },
-    },
+    opts = require("config.plugins.tree-sitter")
   },
 }

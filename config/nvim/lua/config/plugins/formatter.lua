@@ -7,6 +7,10 @@ return function()
         require("formatter.filetypes.lua").stylua,
       },
 
+      ruby = {
+        require("formatter.filetypes.ruby").standardrb,
+      },
+
       ["*"] = {
         require("formatter.filetypes.any").remove_trailing_whitespace,
       },

@@ -1,4 +1,4 @@
-require('onedark').load()
+require("onedark").load()
 
 local indent = 2
 

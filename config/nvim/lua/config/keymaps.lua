@@ -1,7 +1,7 @@
 local keymap = vim.keymap.set
 
 -- Space as leader
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- Better pane navigation
 keymap("n", "<C-h>", "<C-w>h")

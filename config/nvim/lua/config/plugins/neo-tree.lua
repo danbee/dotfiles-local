@@ -3,6 +3,6 @@ return function()
   vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
   require("neo-tree").setup({
-    hijack_netrw_behavior = "open_default"
+    hijack_netrw_behavior = "open_default",
   })
 end

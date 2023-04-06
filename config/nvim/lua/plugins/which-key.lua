@@ -1,5 +1,5 @@
 return {
   "folke/which-key.nvim",
 
-  config = require("config.plugins.which-key")
+  config = require("config.plugins.which-key"),
 }

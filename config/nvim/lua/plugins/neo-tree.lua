@@ -1,11 +1,11 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
 
-  dependencies = { 
+  dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
   },
 
-  config = require("config.plugins.neo-tree")
+  config = require("config.plugins.neo-tree"),
 }

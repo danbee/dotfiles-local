@@ -1,0 +1,15 @@
+{
+    "workspace.library": [
+        "/Users/danbarber/.config/nvim",
+        "/Users/danbarber/.local/share/nvim/lazy/lazy.nvim",
+        "/Users/danbarber/.local/share/nvim/lazy/nvim-lspconfig",
+        "/Users/danbarber/.local/share/nvim/lazy/nordic.nvim",
+        "/Users/danbarber/.local/share/nvim/lazy/plenary.nvim",
+        "/Users/danbarber/.local/share/nvim/lazy/telescope.nvim",
+        "/Users/danbarber/.local/share/nvim/lazy/tokyonight.nvim",
+        "/Users/danbarber/.local/share/nvim/lazy/which-key.nvim",
+        "/Applications/VimR.app/Contents/Resources/NvimView_NvimView.bundle/Contents/Resources/runtime",
+        "/Users/danbarber/.local/state/nvim/lazy/readme",
+        "${3rd}/luassert/library"
+    ]
+}

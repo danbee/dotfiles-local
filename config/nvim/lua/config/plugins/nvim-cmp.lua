@@ -23,6 +23,6 @@ return function()
       { name = "vsnip" },
     }, {
       { name = "buffer" },
-    })
+    }),
   })
 end

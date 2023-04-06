@@ -1,5 +1,7 @@
-require("config.plugins.lspconfig.elixir")
-require("config.plugins.lspconfig.emmet")
-require("config.plugins.lspconfig.javascript")
-require("config.plugins.lspconfig.lua")
-require("config.plugins.lspconfig.ruby")
+return function()
+  require("config.plugins.lspconfig.elixir")
+  require("config.plugins.lspconfig.emmet")
+  require("config.plugins.lspconfig.javascript")
+  require("config.plugins.lspconfig.lua")
+  require("config.plugins.lspconfig.ruby")
+end

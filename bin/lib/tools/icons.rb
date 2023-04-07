@@ -7,7 +7,7 @@ module ToolIcons
     "python" => "\e[0;33m",
     "ruby" => "\e[1;31m",
     "rust" => "\e[1;37m",
-    "yarn" => "\e[0;34m",
+    "yarn" => "\e[0;34m"
   }.freeze
 
   def tool_icon(tool)

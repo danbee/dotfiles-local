@@ -9,10 +9,10 @@ class ToolsFile
   private
 
   def format_tools
-    Hash[tools_file.lines.map do |tool|
+    tools_file.lines.map do |tool|
       name, version, source = tool.split
-      [name, { version: version, source: source }]
-    end]
+      [name, {version: version, source: source}]
+    end.to_h
   end
 
   def tools_file

@@ -5,6 +5,7 @@ return {
   "hrsh7th/cmp-cmdline",
   "hrsh7th/cmp-vsnip",
   "hrsh7th/vim-vsnip",
+  "mhinz/vim-startify",
   {
     "hrsh7th/nvim-cmp",
     config = require("config.plugins.nvim-cmp"),

@@ -17,3 +17,6 @@ keymap("n", "<C-\\>", ":Neotree reveal<CR>")
 keymap("n", "<C-p>", ":Telescope find_files<CR>")
 keymap("n", "<C-s>", ":Telescope live_grep<CR>")
 keymap("n", "<C-b>", ":Telescope buffers<CR>")
+
+-- Formatting
+keymap("n", "<leader>f", ":lua vim.lsp.buf.format()<CR>")

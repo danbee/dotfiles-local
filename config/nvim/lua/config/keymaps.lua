@@ -14,5 +14,6 @@ keymap("n", "\\", ":Neotree toggle<CR>")
 keymap("n", "<C-\\>", ":Neotree reveal<CR>")
 
 -- Telescope
-keymap("n", "<C-P>", ":Telescope find_files<CR>")
-keymap("n", "<C-B>", ":Telescope buffers<CR>")
+keymap("n", "<C-p>", ":Telescope find_files<CR>")
+keymap("n", "<C-s>", ":Telescope live_grep<CR>")
+keymap("n", "<C-b>", ":Telescope buffers<CR>")

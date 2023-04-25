@@ -2,6 +2,8 @@ require("onedark").load()
 
 local indent = 2
 
+vim.opt.updatetime = 100
+
 -- Tabstops
 vim.opt.expandtab = true
 vim.opt.shiftwidth = indent

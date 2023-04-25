@@ -6,6 +6,14 @@ return {
   "hrsh7th/cmp-vsnip",
   "hrsh7th/vim-vsnip",
   "mhinz/vim-startify",
+  "tpope/vim-fugitive",
+  "preservim/nerdcommenter",
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup()
+    end,
+  },
   {
     "hrsh7th/nvim-cmp",
     config = require("config.plugins.nvim-cmp"),

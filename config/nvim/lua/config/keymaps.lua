@@ -19,4 +19,7 @@ keymap("n", "<C-s>", ":Telescope live_grep<CR>")
 keymap("n", "<C-b>", ":Telescope buffers<CR>")
 
 -- Formatting
-keymap("n", "<leader>f", ":lua vim.lsp.buf.format()<CR>")
+keymap("n", "<leader>f", vim.lsp.buf.format, { desc = "Format buffer" })
+
+-- LSP
+require("config.keymaps.lsp")

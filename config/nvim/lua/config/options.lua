@@ -12,3 +12,11 @@ vim.opt.tabstop = indent
 
 -- Line numbers
 vim.opt.number = true
+
+-- Line width
+vim.opt.textwidth = 120
+vim.opt.colorcolumn = "+1"
+
+-- Open new split panes to the right and bottom, which feels more natural
+vim.opt.splitbelow = true
+vim.opt.splitright = true

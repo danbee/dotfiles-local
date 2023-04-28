@@ -4,4 +4,5 @@ return function()
   require("config.plugins.lspconfig.javascript")
   require("config.plugins.lspconfig.lua")
   require("config.plugins.lspconfig.ruby")
+  require("config.plugins.lspconfig.rust")
 end

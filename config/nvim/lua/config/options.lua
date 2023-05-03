@@ -19,7 +19,7 @@ vim.opt.number = true
 -- Line width
 local colorcolumns = {}
 for i = 1, 40 do
-	table.insert(colorcolumns, string.format("+%i", i))
+  table.insert(colorcolumns, string.format("+%i", i))
 end
 
 vim.opt.textwidth = 80
@@ -29,8 +29,11 @@ vim.opt.colorcolumn = table.concat(colorcolumns, ",")
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+-- Add a space after comment characters
+vim.g.NERDSpaceDelims = 1
+
 -- Neovide
 if vim.g.neovide then
-	vim.g.neovide_cursor_animation_length = 0
-	vim.g.neovide_background_color = "#20252c"
+  vim.g.neovide_cursor_animation_length = 0
+  vim.g.neovide_background_color = "#20252c"
 end

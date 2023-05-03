@@ -5,9 +5,23 @@ return {
   "hrsh7th/cmp-cmdline",
   "hrsh7th/cmp-vsnip",
   "hrsh7th/vim-vsnip",
-  "mhinz/vim-startify",
   "tpope/vim-fugitive",
   "preservim/nerdcommenter",
+  {
+    "MaximilianLloyd/ascii.nvim",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+  },
+  {
+    "glepnir/dashboard-nvim",
+    event = "VimEnter",
+    config = function()
+      require("dashboard").setup({
+      })
+    end,
+    dependencies = { { "nvim-tree/nvim-web-devicons" } },
+  },
   {
     "lewis6991/gitsigns.nvim",
     config = function()

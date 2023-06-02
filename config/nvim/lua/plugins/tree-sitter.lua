@@ -9,7 +9,7 @@ return {
         init = function()
           -- PERF: no need to load the plugin, if we only need its queries for mini.ai
           local plugin =
-              require("lazy.core.config").spec.plugins["nvim-treesitter"]
+            require("lazy.core.config").spec.plugins["nvim-treesitter"]
           local opts = require("lazy.core.plugin").values(plugin, "opts", false)
           local enabled = false
           if opts.textobjects then
@@ -28,6 +28,7 @@ return {
         end,
       },
       "JoosepAlviste/nvim-ts-context-commentstring",
+      "RRethy/nvim-treesitter-endwise",
     },
     config = require("config.plugins.tree-sitter"),
   },

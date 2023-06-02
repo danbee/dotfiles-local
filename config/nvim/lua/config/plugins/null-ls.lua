@@ -24,6 +24,7 @@ return function()
           "vue",
           "yaml",
         },
+        timeout = 5000,
       }),
       null_ls.builtins.formatting.rustfmt,
       null_ls.builtins.formatting.standardrb,

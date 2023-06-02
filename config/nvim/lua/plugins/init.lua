@@ -8,6 +8,11 @@ return {
   "tpope/vim-fugitive",
   "preservim/nerdcommenter",
   {
+    "Wansmer/treesj",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = require("config.plugins.treesj"),
+  },
+  {
     "MaximilianLloyd/ascii.nvim",
     dependencies = {
       "MunifTanjim/nui.nvim",

@@ -1,74 +1,24 @@
 return {
-  "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-buffer",
-  "hrsh7th/cmp-path",
   "hrsh7th/cmp-cmdline",
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-path",
   "hrsh7th/cmp-vsnip",
   "hrsh7th/vim-vsnip",
-  "tpope/vim-fugitive",
   "preservim/nerdcommenter",
-  {
-    "Wansmer/treesj",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    config = require("config.plugins.treesj"),
-  },
-  {
-    "MaximilianLloyd/ascii.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
-  },
-  {
-    "glepnir/dashboard-nvim",
-    event = "VimEnter",
-    config = require("config.plugins.dashboard"),
-    dependencies = { { "nvim-tree/nvim-web-devicons" } },
-  },
-  {
-    "lewis6991/gitsigns.nvim",
-    config = function()
-      require("gitsigns").setup()
-    end,
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    config = require("config.plugins.nvim-cmp"),
-  },
-  {
-    "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = require("config.plugins.lspconfig"),
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = require("config.plugins.lualine"),
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    config = require("config.plugins.neo-tree"),
-  },
-  {
-    "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-  },
-  {
-    "folke/which-key.nvim",
-    config = require("config.plugins.which-key"),
-  },
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = require("config.plugins.null-ls"),
-  },
+  "tpope/vim-fugitive",
+  require("config.plugins.ascii"),
+  require("config.plugins.dashboard"),
+  require("config.plugins.gitsigns"),
+  require("config.plugins.lspconfig"),
+  require("config.plugins.lualine"),
+  require("config.plugins.mason"),
+  require("config.plugins.neo-tree"),
+  require("config.plugins.null-ls"),
+  require("config.plugins.nvim-cmp"),
+  require("config.plugins.nvim-test"),
+  require("config.plugins.nvim-treesitter"),
+  require("config.plugins.telescope"),
+  require("config.plugins.treesj"),
+  require("config.plugins.which-key"),
 }

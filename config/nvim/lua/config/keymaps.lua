@@ -18,13 +18,9 @@ keymap("n", "<C-p>", ":Telescope find_files<CR>")
 keymap("n", "<C-s>", ":Telescope live_grep<CR>")
 keymap("n", "<C-b>", ":Telescope buffers<CR>")
 
--- SplitJoin
-keymap("n", "gs", ":TSJSplit<CR>", { desc = "Split block" })
-keymap("n", "gj", ":TSJJoin<CR>", { desc = "Join blocks" })
-keymap("n", "gm", ":TSJToggle<CR>", { desc = "SplitJoin togggle" })
-
 -- Formatting
 keymap("n", "<leader>f", vim.lsp.buf.format, { desc = "Format buffer" })
 
 -- LSP
 require("config.keymaps.lsp")
+require("config.keymaps.nvim-test")

@@ -19,6 +19,7 @@ return {
   require("config.plugins.nvim-test"),
   require("config.plugins.nvim-treesitter"),
   require("config.plugins.telescope"),
+  require("config.plugins.toggleterm"),
   require("config.plugins.treesj"),
   require("config.plugins.which-key"),
 }

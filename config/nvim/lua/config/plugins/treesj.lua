@@ -3,9 +3,9 @@ return {
 
   dependencies = { "nvim-treesitter/nvim-treesitter" },
 
-  keys = { "gm", "gj", "gs" },
-
   config = function()
-    require("treesj").setup()
+    require("treesj").setup({
+      use_default_keymaps = false,
+    })
   end,
 }

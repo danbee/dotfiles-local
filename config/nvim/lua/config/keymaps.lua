@@ -21,6 +21,11 @@ keymap("n", "<C-b>", ":Telescope buffers<CR>")
 -- Formatting
 keymap("n", "<leader>f", vim.lsp.buf.format, { desc = "Format buffer" })
 
+-- TreeSJ
+keymap("n", "gs", ":TSJSplit<CR>", { desc = "Split code block" })
+keymap("n", "gj", ":TSJJoin<CR>", { desc = "Join code block" })
+keymap("n", "gm", ":TSJToggle<CR>", { desc = "Split or join code block" })
+
 -- LSP
 require("config.keymaps.lsp")
 require("config.keymaps.nvim-test")

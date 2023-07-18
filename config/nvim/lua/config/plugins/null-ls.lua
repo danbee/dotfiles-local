@@ -1,8 +1,6 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
-
   dependencies = { "nvim-lua/plenary.nvim" },
-
   config = function()
     local null_ls = require("null-ls")
 
@@ -14,7 +12,6 @@ return {
             "css",
             "graphql",
             "handlebars",
-            "html",
             "javascript",
             "javascriptreact",
             "json",

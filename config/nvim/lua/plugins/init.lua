@@ -5,6 +5,7 @@ return {
   "hrsh7th/cmp-path",
   "hrsh7th/cmp-vsnip",
   "hrsh7th/vim-vsnip",
+  "onsails/lspkind-nvim",
   "preservim/nerdcommenter",
   "tpope/vim-bundler",
   "tpope/vim-eunuch",

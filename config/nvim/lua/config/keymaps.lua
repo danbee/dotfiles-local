@@ -28,4 +28,4 @@ keymap("n", "gm", ":TSJToggle<CR>", { desc = "Split or join code block" })
 
 -- LSP
 require("config.keymaps.lsp")
-require("config.keymaps.nvim-test")
+require("config.keymaps.test")

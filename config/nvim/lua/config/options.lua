@@ -32,6 +32,9 @@ vim.opt.splitright = true
 -- Add a space after comment characters
 vim.g.NERDSpaceDelims = 1
 
+-- Tests
+vim.g["test#strategy"] = "toggleterm"
+
 -- Neovide
 if vim.g.neovide then
   vim.g.neovide_cursor_animation_length = 0

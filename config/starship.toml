@@ -5,23 +5,56 @@ command_timeout=1000
 success_symbol = "[](bold cyan)"
 error_symbol = "[](bold red)"
 
-[package]
-symbol = " "
-
-[ruby]
-symbol = " "
-
 [aws]
-symbol = " "
+symbol = " "
 
-[python]
-symbol = " "
+[c]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = "󰡨 "
+
+[dotnet]
+symbol = " "
 
 [elixir]
 symbol = " "
 
+[elm]
+symbol = " "
+
+[erlang]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[package]
+symbol = " "
+
+[php]
+symbol =" "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
 [rust]
 symbol = " "
+
+[swift]
+symbol = " "
 
 [custom.os]
 disabled = false

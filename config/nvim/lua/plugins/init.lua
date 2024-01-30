@@ -23,7 +23,7 @@ return {
   require("config.plugins.dashboard"),
   require("config.plugins.guess-indent"),
   require("config.plugins.gitsigns"),
-  require("config.plugins.lspconfig"),
+  require("config.plugins.lspconfig.init"),
   require("config.plugins.lualine"),
   require("config.plugins.mason"),
   require("config.plugins.neo-tree"),

@@ -2,6 +2,7 @@ return {
   "neovim/nvim-lspconfig",
 
   config = function()
+    require("config.plugins.lspconfig.css")
     require("config.plugins.lspconfig.elixir")
     require("config.plugins.lspconfig.emmet")
     require("config.plugins.lspconfig.javascript")

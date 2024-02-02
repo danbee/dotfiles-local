@@ -25,6 +25,10 @@ end
 vim.opt.textwidth = 80
 vim.opt.colorcolumn = table.concat(colorcolumns, ",")
 
+-- Highlight trailing whitespace
+vim.opt.listchars = "tab:▸·,trail:·,nbsp:·"
+vim.opt.list = true
+
 -- Open new split panes to the right and bottom, which feels more natural
 vim.opt.splitbelow = true
 vim.opt.splitright = true

@@ -1,35 +1,18 @@
 return {
   "nvimtools/none-ls.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim",
+    "nvim-lua/plenary.nvim",
+  },
   config = function()
     local null_ls = require("null-ls")
 
     null_ls.setup({
       sources = {
         null_ls.builtins.formatting.crystal_format,
-        null_ls.builtins.formatting.prettierd.with({
-          filetypes = {
-            "css",
-            "graphql",
-            "handlebars",
-            "javascript",
-            "javascriptreact",
-            "json",
-            "jsonc",
-            "less",
-            "markdown",
-            "markdown.mdx",
-            "ruby",
-            "typescript",
-            "typescriptreact",
-            "vue",
-            "yaml",
-          },
-          timeout = 5000,
-        }),
         null_ls.builtins.formatting.stylelint,
-        null_ls.builtins.formatting.rustfmt,
-        null_ls.builtins.formatting.standardrb,
+        require("none-ls.formatting.standardrb"),
+        require("none-ls.formatting.rustfmt"),
         null_ls.builtins.formatting.stylua,
       },
     })

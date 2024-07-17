@@ -1,9 +1,10 @@
-fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/sbin
-
 starship init fish | source
 
-source (brew --prefix)/opt/asdf/libexec/asdf.fish
+if test -d ~/.asdf
+  source ~/.asdf/asdf.fish
+else
+  source (brew --prefix)/opt/asdf/libexec/asdf.fish
+end
 
 source ~/.aliases.local
 

@@ -2,8 +2,8 @@ format="$all$custom$jobs$directory$character"
 command_timeout=1000
 
 [character]
-success_symbol = "[](bold cyan)"
-error_symbol = "[](bold red)"
+success_symbol = "[❯](bold cyan)"
+error_symbol = "[❯](bold red)"
 
 [aws]
 symbol = " "

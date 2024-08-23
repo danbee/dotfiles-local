@@ -4,8 +4,8 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 config.color_scheme = "Gruvbox Dark (Gogh)"
-config.font = wezterm.font "MonoLisa"
-config.font_size = 13
+config.font = wezterm.font "Berkeley Mono"
+config.font_size = 14
 
 config.use_fancy_tab_bar = false
 

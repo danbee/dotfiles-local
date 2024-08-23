@@ -32,6 +32,7 @@ return {
   require("config.plugins.nvim-highlight-colors"),
   require("config.plugins.nvim-treesitter"),
   require("config.plugins.telescope"),
+  require("config.plugins.todo-comments"),
   require("config.plugins.toggleterm"),
   require("config.plugins.treesj"),
   require("config.plugins.which-key"),

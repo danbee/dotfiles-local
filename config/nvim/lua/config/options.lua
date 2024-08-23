@@ -39,6 +39,9 @@ vim.g.NERDSpaceDelims = 1
 -- Tests
 vim.g["test#strategy"] = "toggleterm"
 
+-- GUI Font
+vim.o.guifont = "BerkeleyMono Nerd Font:h14"
+
 -- Neovide
 if vim.g.neovide then
   vim.g.neovide_cursor_animation_length = 0

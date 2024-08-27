@@ -3,22 +3,22 @@ local config = wezterm.config_builder()
 
 local act = wezterm.action
 
-config.color_scheme = "Gruvbox Dark (Gogh)"
+config.color_scheme = "Srcery (Gogh)"
 config.font = wezterm.font "Berkeley Mono"
 config.font_size = 14
 
 config.use_fancy_tab_bar = false
 
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
 }
 
 config.keys = {
-	{ key = "LeftArrow", mods = "CMD", action = act.ActivateTabRelative(-1) },
-	{ key = "RightArrow", mods = "CMD", action = act.ActivateTabRelative(1) },
+  { key = "LeftArrow",  mods = "CMD", action = act.ActivateTabRelative(-1) },
+  { key = "RightArrow", mods = "CMD", action = act.ActivateTabRelative(1) },
 }
 
 return config

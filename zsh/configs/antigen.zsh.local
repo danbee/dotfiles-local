@@ -1,0 +1,4 @@
+source $HOME/.zsh/lib/antigen.zsh
+source $HOME/.zsh/bundles.zsh.local
+
+antigen apply

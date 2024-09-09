@@ -1,3 +1,8 @@
+require("onedark").setup({
+  style = "darker",
+  transparent = not vim.g.neovide,
+})
+
 require("onedark").load()
 
 local indent = 2
@@ -18,8 +23,11 @@ vim.opt.number = true
 
 -- Line width
 local colorcolumns = {}
-for i = 1, 40 do
-  table.insert(colorcolumns, string.format("+%i", i))
+
+if vim.g.neovide then
+  for i = 1, 40 do
+    table.insert(colorcolumns, string.format("+%i", i))
+  end
 end
 
 vim.opt.textwidth = 80

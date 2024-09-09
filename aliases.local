@@ -19,3 +19,5 @@ alias httpserver="ruby -run -e httpd"
 
 # Shell
 alias sanify="stty sane"
+
+alias ip="curl canhasip.com"

@@ -21,6 +21,7 @@ return {
   require("config.plugins.ascii"),
   require("config.plugins.colortils"),
   require("config.plugins.dashboard"),
+  require("config.plugins.filetype"),
   require("config.plugins.guess-indent"),
   require("config.plugins.gitsigns"),
   require("config.plugins.lspconfig.init"),

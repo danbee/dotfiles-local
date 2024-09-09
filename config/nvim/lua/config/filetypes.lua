@@ -3,8 +3,11 @@ vim.filetype.add({
     pom = "ruby",
   },
   filename = {
-    ["Jenkinsfile"] = "groovy"
-  }
+    ["Jenkinsfile"] = "groovy",
+  },
+  complex = {
+    ["*.zsh.local"] = "zsh",
+  },
 })
 
 vim.api.nvim_create_autocmd("FileType", {

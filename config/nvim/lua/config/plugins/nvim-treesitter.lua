@@ -39,7 +39,6 @@ return {
     config = function()
       require("nvim-treesitter.configs").setup({
         highlight = { enable = true },
-        indent = { enable = true },
         endwise = { enable = true },
         auto_install = true,
         sync_install = false,

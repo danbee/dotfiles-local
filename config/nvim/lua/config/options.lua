@@ -16,6 +16,7 @@ vim.opt.exrc = true
 vim.opt.expandtab = true
 vim.opt.shiftwidth = indent
 vim.opt.smartindent = true
+vim.opt.autoindent = true
 vim.opt.tabstop = indent
 
 -- Line numbers

@@ -24,6 +24,7 @@ return {
   require("config.plugins.filetype"),
   require("config.plugins.guess-indent"),
   require("config.plugins.gitsigns"),
+  require("config.plugins.indent-blankline"),
   require("config.plugins.lspconfig.init"),
   require("config.plugins.lualine"),
   require("config.plugins.mason"),

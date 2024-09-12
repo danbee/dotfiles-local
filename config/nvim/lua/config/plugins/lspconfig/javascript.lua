@@ -1,4 +1,4 @@
 local lspconfig = require("lspconfig")
 
 lspconfig.eslint.setup({})
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})

@@ -1,0 +1,9 @@
+source "${HOME}/.zgenom/zgenom.zsh"
+
+zgenom autoupdate
+
+if ! zgenom saved; then
+  source "${HOME}/.zsh/bundles.zsh.local"
+
+  zgenom save
+fi

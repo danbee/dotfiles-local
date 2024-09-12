@@ -1,2 +1,3 @@
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle Aloxaf/fzf-tab
+zgenom load Aloxaf/fzf-tab
+zgenom load joshskidmore/zsh-fzf-history-search
+zgenom load zsh-users/zsh-syntax-highlighting

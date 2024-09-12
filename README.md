@@ -9,7 +9,7 @@ From home directory:
 ```bash
 chsh -s $(which zsh)
 git clone git@github.com:thoughtbot/dotfiles.git
-git clone git@github.com:danbee/dotfiles-local.git
+git clone --recurse-submodules git@github.com:danbee/dotfiles-local.git
 brew tap thoughtbot/formulae
 brew install rcm
 env RCRC=$HOME/dotfiles/rcrc rcup
